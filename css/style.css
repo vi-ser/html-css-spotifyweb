@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Font Circular */
+/* font */
 
 @font-face {
     font-family: 'CircularLight';
@@ -30,17 +30,29 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: 'CircularBlack';
+    src: url('/fonts/CircularStd-Black.otf');
+    font-weight: 800;
+}
+
 body {
     font-family: 'Circular', sans-serif;
     background-color: #141922;
 }
 
-/* Container */
+h2 {
+    font-weight: 800;
+    color: white;
+    font-size: 26px;
+}
+
+/* container */
 .container {
     display: flex;
 }
 
-/* Barra upgrade */
+/* barra upgrade */
 .upgrade {
     width: calc(100vw - 230px);
     height: 90px;
@@ -61,7 +73,7 @@ aside {
     position: fixed;
 }
 
-/* Main */
+/* main */
 main {
     width: 100%;
     height: calc(100vh - 90px);
@@ -73,6 +85,7 @@ main {
     overflow-y: scroll;
 }
 
+/* navbar */
 main nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +122,55 @@ main nav .selected::after {
     width: 30px;
     border-bottom: 2px solid #ADFF2F;
 }
+
+/* fine navbar */
+
+main h2:first-of-type {
+    margin-bottom: 30px;
+}
+
+main .album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    column-gap: calc(1.25vw);
+    row-gap: 10px;
+}
+
+main .album-grid .album-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+main .album-grid .album-card .cover img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+
+main .album-grid .album-card .title {
+    display: block;
+    color: white;
+    font-weight: 800;
+    font-size: 17;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+main .album-grid .album-card .artist {
+    display: block;
+    color: #7D7F84;
+    font-weight: 800;
+    font-size: 13;
+    line-height: 13px;
+}
+
+
+
 
 
 
