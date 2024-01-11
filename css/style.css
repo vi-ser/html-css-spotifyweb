@@ -33,3 +33,46 @@
 body {
     font-family: 'Circular', sans-serif;
 }
+
+/* Container */
+.container {
+    display: flex;
+}
+
+/* Barra upgrade */
+.upgrade {
+    width: calc(100vw - 230px);
+    height: 90px;
+    background-color: #080b12de;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Sidebar */
+aside {
+    width: 230px;
+    height: calc(100vh - 90px);
+    background-color: black;
+    flex-grow: 0;
+    position: fixed;
+}
+
+/* Main */
+main {
+    height: calc(100vh - 90px);
+    padding-top: 90px;
+    padding-left: 230px;
+    overflow-y: scroll;
+}
+
+/* Now playing bar */
+.now-playing-bar {
+    width: 100%;
+    height: 90px;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+}
