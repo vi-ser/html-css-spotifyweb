@@ -197,6 +197,8 @@ nav {
 
 #bottom {
     padding: 7px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #bottom #install {
@@ -354,7 +356,6 @@ main {
 /* fine filtri */
 
 /* selector */
-
 h2:first-of-type {
     margin-bottom: 30px;
 }
@@ -451,7 +452,7 @@ h2:first-of-type {
 
     aside .logo {
         display: flex;
-        padding: 5px 10px;
+        padding: 5px 10px 12px;
     }
 
     aside .logo img:first-child {
@@ -468,6 +469,36 @@ h2:first-of-type {
         display: none;
     }
 
+    #primary {
+        padding: 5px 15px
+    }
+
+    #new-playlist img.big {
+        display: none;
+    }
+
+    #bottom {
+        align-items: center;
+        padding: 10px 12px;
+    }
+
+    #bottom #install {
+        padding: 10px 6px;
+    }
+
+    #bottom #install img {
+        width: 20px;
+        margin-right: 3px;
+    }
+
+    #bottom #account {
+        padding: 12px 0 0;
+    }
+
+    #bottom #account img {
+        width: 25px;
+        height: 25px;
+    }
 
 
     #banner {
