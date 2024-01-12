@@ -71,6 +71,128 @@ aside {
     background-color: black;
 }
 
+aside .logo {
+    padding: 20px;
+}
+
+aside img {
+    width: 130px;
+}
+
+aside span {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+aside #drawer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+nav #primary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+#primary .element {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+#primary img {
+    opacity: .4;
+}
+
+#primary img.selected {
+    opacity: .8;
+}
+
+#primary span {
+    opacity: .4;
+}
+
+#primary span.selected {
+    opacity: 1;
+}
+
+
+#primary .element:hover span {
+    opacity: 1;
+}
+
+#primary .element:hover img {
+    opacity: 1;
+}
+
+
+#primary img {
+    width: 20px;
+}
+
+nav #secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+nav #secondary:first-child {
+    gap: 15px;
+}
+
+nav #secondary strong {
+    font-size: 14px;
+}
+
+
+nav #secondary span {
+    opacity: .4;
+}
+
+nav #secondary span:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#new-playlist {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#new-playlist img.big {
+    width: 37px;
+    opacity: .4;
+}
+
+#new-playlist span.big {
+    font-size: 16px;
+}
+
+#new-playlist:hover img {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#new-playlist:hover span {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
 /* main */
 main {
     width: calc(100% - 230px);
@@ -113,21 +235,17 @@ main {
     padding: 15px 40px;
     border-radius: 50px;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 #banner .btn:hover {
     font-size: 15px;
 }
 
-
-
-
-
 /* fine banner */
 
 
 /* filtri */
-
 #filters {
     padding: 20px;
 }
