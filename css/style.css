@@ -90,13 +90,13 @@ aside #drawer {
     justify-content: space-between;
 }
 
-aside nav {
+nav {
     display: flex;
     flex-direction: column;
     color: white;
 }
 
-nav #primary {
+#primary {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -140,27 +140,27 @@ nav #primary {
     width: 20px;
 }
 
-nav #secondary {
+#secondary {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 10px 20px;
 }
 
-nav #secondary:first-child {
+#secondary:first-child {
     gap: 15px;
 }
 
-nav #secondary strong {
+#secondary strong {
     font-size: 14px;
 }
 
 
-nav #secondary span {
+#secondary span {
     opacity: .4;
 }
 
-nav #secondary span:hover {
+#secondary span:hover {
     opacity: 1;
     cursor: pointer;
 }
@@ -190,6 +190,59 @@ nav #secondary span:hover {
     opacity: 1;
     cursor: pointer;
 }
+
+#bottom {
+    padding: 7px 20px;
+    margin-top: auto;
+}
+
+#bottom #install {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: .4;
+    padding: 10px 0;
+}
+
+#bottom #install img {
+    width: 20px;
+}
+
+#bottom #install span {
+    color: white;
+    font-size: 14;
+}
+
+#bottom #install:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#bottom hr {
+    border: 1px solid white;
+    opacity: .4;
+}
+
+#bottom #account {
+    padding: 13px 0 7px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#bottom #account img {
+    width: 25px;
+    height: 25px;
+    background-color: #808080;
+    border-radius: 50px;
+}
+
+#bottom #account span {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
 
 
 
