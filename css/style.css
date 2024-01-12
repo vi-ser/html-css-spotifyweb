@@ -107,7 +107,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 0;
 }
 
 #primary .element {
@@ -115,6 +115,7 @@ nav {
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    padding-left: 20px;
 }
 
 #primary img {
@@ -123,6 +124,10 @@ nav {
 
 #primary img.selected {
     opacity: .8;
+}
+
+#primary .element.selected {
+    border-left: 2px solid #ADFF2F;
 }
 
 #primary span {
@@ -471,6 +476,14 @@ h2:first-of-type {
 
     #primary {
         padding: 5px 15px
+    }
+
+    #primary .element {
+        padding-left: 0;
+    }
+
+    #primary .element.selected {
+        border-left: none;
     }
 
     #new-playlist img.big {
