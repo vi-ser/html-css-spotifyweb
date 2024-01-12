@@ -63,9 +63,10 @@ p {
     height: calc(100vh - 90px);
 }
 
-
-/* Sidebar */
+/* sidebar */
 aside {
+    display: flex;
+    flex-direction: column;
     width: 230px;
     height: 100%;
     background-color: black;
@@ -73,9 +74,14 @@ aside {
 
 aside .logo {
     padding: 20px;
+    flex-grow: 0;
 }
 
-aside img {
+aside .logo img:first-child {
+    display: none;
+}
+
+aside .logo img {
     width: 130px;
 }
 
@@ -88,9 +94,7 @@ aside #drawer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    height: calc(100% - 90px);
-
+    flex-grow: 1;
 }
 
 nav {
@@ -150,12 +154,9 @@ nav {
     padding: 10px 20px;
 }
 
-#secondary:first-child {
-    gap: 15px;
-}
-
 #secondary strong {
     font-size: 14px;
+    margin-bottom: -5px;
 }
 
 
@@ -245,6 +246,8 @@ nav {
     font-weight: 700;
 }
 
+/* fine sidebar */
+
 
 
 
@@ -294,7 +297,7 @@ main {
 }
 
 #banner .btn:hover {
-    font-size: 15px;
+    transform: scale(1.05);
 }
 
 /* fine banner */
@@ -446,6 +449,27 @@ h2:first-of-type {
         width: 50px;
     }
 
+    aside .logo {
+        display: flex;
+        padding: 5px 10px;
+    }
+
+    aside .logo img:first-child {
+        display: block;
+    }
+
+    aside .logo img:nth-child(2) {
+        display: none;
+    }
+
+    aside span,
+    aside strong,
+    aside hr {
+        display: none;
+    }
+
+
+
     #banner {
         width: calc(100% - 50px);
     }
@@ -453,4 +477,5 @@ h2:first-of-type {
     main {
         width: calc(100% - 50px);
     }
+
 }
