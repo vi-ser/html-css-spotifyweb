@@ -462,7 +462,7 @@ h2:first-of-type {
     position: fixed;
     bottom: 0;
 
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .now-playing-bar .left {
@@ -512,10 +512,104 @@ h2:first-of-type {
     opacity: .6;
 }
 
+.now-playing-bar .actions i:hover {
+    transition: .3s;
+    opacity: 1;
+    cursor: pointer;
+}
+
 
 .now-playing-bar .song img {
     height: 42px;
 }
+
+.now-playing-bar .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    width: 522px;
+}
+
+.now-playing-bar .center .commands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    color: white;
+    font-size: 15px;
+}
+
+.now-playing-bar .center .commands .fa-circle-play {
+    padding: 0 10px;
+    font-size: 30px;
+}
+
+.now-playing-bar .center .commands .fa-circle-play:hover {
+    transition: .3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.now-playing-bar .center #player {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+}
+
+.now-playing-bar .center .progress-bar {
+    height: 4px;
+    width: 100%;
+    background-color: #5a5a5a;
+    border-radius: 50px;
+    position: relative;
+}
+
+.now-playing-bar .center .progress-bar .actual {
+    height: 4px;
+    width: 20%;
+    max-width: 100%;
+
+    background-color: #c1c1c1;
+    border-radius: 50px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.now-playing-bar .center .progress-bar .actual .handle {
+    display: none;
+
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: -6px;
+    top: -4px;
+}
+
+.now-playing-bar .center .progress-bar:hover .actual {
+    transition: .3s;
+    background-color: #ADFF2F;
+}
+
+.now-playing-bar .center .progress-bar:hover .actual .handle {
+    display: flex;
+}
+
+#player #time,
+#player #song-duration {
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+
 
 
 .now-playing-bar .right {
@@ -527,7 +621,7 @@ h2:first-of-type {
 .now-playing-bar .right .icons {
     display: flex;
     gap: 17px;
-    padding: 0 14px;
+    padding: 0 14px 0 0;
     color: white;
 }
 
@@ -569,18 +663,11 @@ h2:first-of-type {
 .now-playing-bar .right .volume-bar:hover .slider {
     transition: .3s;
     background-color: #ADFF2F;
-    cursor: pointer;
 }
 
 .now-playing-bar .right .volume-bar:hover .handle {
     display: flex;
 }
-
-
-
-
-
-
 
 /* fine now playing bar */
 
