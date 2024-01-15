@@ -399,6 +399,7 @@ h2:first-of-type {
 
 .album-grid .album-card .cover {
     position: relative;
+    margin-bottom: 10px;
 }
 
 
@@ -406,7 +407,6 @@ h2:first-of-type {
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    margin-bottom: 10px;
 }
 
 .album-grid .album-card .cover #play-hover {
@@ -416,7 +416,7 @@ h2:first-of-type {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .album-grid .album-card .cover img:hover {
@@ -428,6 +428,7 @@ h2:first-of-type {
     transition: .3s ease;
     opacity: 1;
 }
+
 
 .album-grid.circle img {
     border-radius: 50%;
