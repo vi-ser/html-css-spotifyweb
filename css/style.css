@@ -67,191 +67,240 @@ p {
 aside {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 230px;
     height: 100%;
+
     background-color: black;
+    color: white;
+    font-weight: bold;
+
+    padding: 20px 20px 0;
 }
 
-aside .logo {
-    padding: 20px;
-    flex-grow: 0;
+aside button {
+    background-color: transparent;
+    color: white;
+    border: none;
 }
 
-aside .logo img:first-child {
-    display: none;
+aside button span {
+    font-weight: 700;
+
 }
 
-aside .logo img {
+.aside-top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    overflow: hidden;
+}
+
+
+#logo img {
     width: 130px;
 }
 
-aside span {
-    font-weight: 700;
-    font-size: 14px;
+#logo .small {
+    display: none;
 }
 
-aside #drawer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-
-#primary {
+#main-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px 20px 10px 0;
+
+    list-style-type: none;
 }
 
-#primary .element {
+
+#main-links a {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+
+    color: inherit;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: .6;
+}
+
+#main-links a.selected {
+    opacity: .9;
+}
+
+
+#main-links a:hover {
+    transition: .3s ease;
+    opacity: 1;
     cursor: pointer;
-    padding-left: 20px;
 }
 
-#primary img {
-    opacity: .4;
+#main-links img {
+    height: 20px;
 }
 
+#playlists {
+    overflow-y: hidden;
+}
+
+#playlists h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+#playlists button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+    opacity: .6;
+}
+
+#playlists button:hover {
+    transition: .3s ease;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#playlists button .fa-solid {
+    display: inline-block;
+
+    background-color: white;
+    color: black;
+
+    padding: 9px 11px 11px;
+
+    font-size: 17px;
+}
+
+#playlists button span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#playlist-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    list-style-type: none;
+    font-size: 14px;
+
+    overflow-y: auto;
+    max-height: calc(100% - 87px);
+}
+
+#playlist-list li {
+    opacity: .6;
+}
+
+#playlist-list li:hover {
+    transition: .3s ease;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.aside-bottom {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.aside-bottom button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.aside-bottom #install-app {
+    margin-bottom: 10px;
+    opacity: .6;
+}
+
+.aside-bottom #install-app:hover {
+    transition: .3s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.aside-bottom #install-app img {
+    height: 12px;
+}
+
+.aside-bottom hr {
+    margin-bottom: 15px;
+    border: 1px solid;
+    opacity: .6;
+}
+
+.aside-bottom #profile-button {
+    font-size: 15px;
+}
+
+.aside-bottom #profile-button span {
+    font-weight: 700;
+}
+
+.aside-bottom #profile-button img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: cover;
+    object-position: top;
+
+    background-color: #808080;
+
+    border-radius: 50%;
+}
+
+/* fine sezione aside */
+
+
+/* 
 #primary img.selected {
     opacity: .8;
-}
+} */
 
-#primary .element.selected {
+/* #primary .element.selected {
     border-left: 2px solid #ADFF2F;
-}
+    padding-left: 18px;
+} */
 
-#primary span {
-    opacity: .4;
-}
-
-#primary span.selected {
-    opacity: 1;
-}
-
-
-#primary .element:hover span {
+/* #primary .element:hover span {
+    transition: .3s ease;
     opacity: 1;
 }
 
 #primary .element:hover img {
+    transition: .3s ease;
     opacity: 1;
 }
 
+ */
 
-#primary img {
-    width: 20px;
-}
-
-#secondary {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px 20px;
-}
-
-#secondary strong {
-    font-size: 14px;
-    margin-bottom: -5px;
-}
-
-
-#secondary span {
-    opacity: .4;
-}
-
-#secondary span:hover {
+/* #secondary span:hover {
+    transition: .3s ease;
     opacity: 1;
     cursor: pointer;
-}
-
-#new-playlist {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+} */
 
 
-#new-playlist img.big {
-    width: 37px;
-    opacity: .4;
-}
-
-#new-playlist span.big {
-    font-size: 16px;
-}
-
-#new-playlist:hover img {
+/* #bottom #install:hover {
+    transition: .3s ease;
     opacity: 1;
     cursor: pointer;
-}
-
-#new-playlist:hover span {
-    opacity: 1;
-    cursor: pointer;
-}
-
-#bottom {
-    padding: 7px 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-#bottom #install {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    opacity: .4;
-    padding: 10px 0;
-}
-
-#bottom #install img {
-    width: 20px;
-}
-
-#bottom #install span {
-    color: white;
-    font-size: 14;
-}
-
-#bottom #install:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
-#bottom hr {
-    border: 1px solid white;
-    opacity: .4;
-}
-
-#bottom #account {
-    padding: 13px 0 7px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-#bottom #account img {
-    width: 25px;
-    height: 25px;
-    background-color: #808080;
-    border-radius: 50px;
-}
-
-#bottom #account span {
-    color: white;
-    font-size: 15px;
-    font-weight: 700;
-}
+} */
 
 /* fine sidebar */
 
@@ -289,6 +338,7 @@ main {
     text-align: right;
 
     background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 
 }
 
@@ -304,6 +354,7 @@ main {
 }
 
 #banner .btn:hover {
+    transition: .3s ease;
     transform: scale(1.05);
 }
 
@@ -328,6 +379,7 @@ main {
 }
 
 #filters a:hover {
+    transition: .3s ease;
     opacity: 1;
 }
 
@@ -385,6 +437,11 @@ h2:first-of-type {
 }
 
 
+.album-grid .album-card .cover {
+    position: relative;
+}
+
+
 .album-grid .album-card .cover img {
     max-width: 100%;
     height: auto;
@@ -392,11 +449,28 @@ h2:first-of-type {
     margin-bottom: 10px;
 }
 
+.album-grid .album-card .cover #play-hover {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.album-grid .album-card .cover img:hover {
+    transition: .3s ease;
+    filter: brightness(.3);
+}
+
+.album-grid .album-card .cover:hover #play-hover {
+    transition: .3s ease;
+    opacity: 1;
+}
+
 .album-grid.circle img {
     border-radius: 50%;
 }
-
-
 
 .album-grid .album-card .title {
     display: block;
@@ -451,75 +525,52 @@ h2:first-of-type {
 /* mobile */
 @media screen and (max-width: 576px) {
 
+
+    #logo .big {
+        display: none;
+    }
+
+    #logo .small {
+        display: inline-block;
+        width: 28px;
+    }
+
     aside {
         width: 50px;
+        padding: 10px;
     }
 
-    aside .logo {
-        display: flex;
-        padding: 5px 10px 12px;
+    .aside-top {
+        gap: 17px;
     }
 
-    aside .logo img:first-child {
-        display: block;
+
+    aside button,
+    aside a {
+        flex-direction: column;
     }
 
-    aside .logo img:nth-child(2) {
+    /* nascondo elementi */
+    aside button span,
+    aside a span,
+    aside hr,
+    #playlists {
         display: none;
     }
 
-    aside span,
-    aside strong,
-    aside hr {
-        display: none;
-    }
-
-    #primary {
-        padding: 5px 15px
-    }
-
-    #primary .element {
-        padding-left: 0;
-    }
-
-    #primary .element.selected {
-        border-left: none;
-    }
-
-    #new-playlist img.big {
-        display: none;
-    }
-
-    #bottom {
-        align-items: center;
-        padding: 10px 12px;
-    }
-
-    #bottom #install {
-        padding: 10px 6px;
-    }
-
-    #bottom #install img {
-        width: 20px;
-        margin-right: 3px;
-    }
-
-    #bottom #account {
-        padding: 12px 0 0;
-    }
-
-    #bottom #account img {
-        width: 25px;
-        height: 25px;
+    aside .aside-bottom {
+        padding-bottom: 0;
     }
 
 
-    #banner {
-        width: calc(100% - 50px);
-    }
 
     main {
         width: calc(100% - 50px);
     }
+
+    main #banner {
+        width: calc(100% - 50px);
+    }
+
 
 }
